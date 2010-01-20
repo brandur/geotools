@@ -23,13 +23,13 @@ h2. Changes
 
     * I've left out the Geotools.SystemTests project because it doesn't compile and I have no idea what the authors were intending to do there. It's still available from the original project's CVS.
     * A couple minor changes to the DBF reader:
-        * '\0' characters are now trimmed from the end of character records
-        * Null date types are now handled correctly (read as 8 blank characters)
-        * @DbaseFieldDescriptor@ now has a @ToString()@ override to make debugging easier
+        ** '\0' characters are now trimmed from the end of character records
+        ** Null date types are now handled correctly (read as 8 blank characters)
+        ** @DbaseFieldDescriptor@ now has a @ToString()@ override to make debugging easier
     * Testing related changes:
-        * The Geotools project's internals are now visible to Geotools.UnitTests, so I've uncommented a set of tests that were commented out before because their targets had been made internal
-        * Added NUnit's @[Test]@ attribute to all unit tests so that my test runners can find them
-        * Changed one assertion method so that it doesn't differentiate between Windows line endings (@\r\n@) and Unix line endings (@\n@) when comparing strings
+        ** The Geotools project's internals are now visible to Geotools.UnitTests, so I've uncommented a set of tests that were commented out before because their targets had been made internal
+        ** Added NUnit's @[Test]@ attribute to all unit tests so that my test runners can find them
+        ** Changed one assertion method so that it doesn't differentiate between Windows line endings (@\r\n@) and Unix line endings (@\n@) when comparing strings
 
 h2. @todo
 
