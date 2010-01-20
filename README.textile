@@ -6,7 +6,7 @@ The code is copyright Urban Science Applications, Inc., written by Ronda Bergman
 
 h2. Description
 
-(Copied from http://geotoolsnet.sourceforge.net/Index.html)
+(Copied from "http://geotoolsnet.sourceforge.net/Index.html":http://geotoolsnet.sourceforge.net/Index.html)
 
 Geotools.Net is a set of .net class useful when handling geographic information. The project started as port from Java to C# of JTS 1.2. It implements the following  OpenGIS specifications:
 
@@ -31,7 +31,7 @@ h2. Changes
         * Added NUnit's @[Test]@ attribute to all unit tests so that my test runners can find them
         * Changed one assertion method so that it doesn't differentiate between Windows line endings (@\r\n@) and Unix line endings (@\n@) when comparing strings
 
-h3. @todo
+h2. @todo
 
     * Modernize or replace the NAnt *.build files, so far I haven't tested them at all
     * The JTS binary that comes with this code is version 1.6, it may or may not be advantageous to upgrade to 1.8
