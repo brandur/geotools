@@ -8,16 +8,16 @@ h2. Description
 
 (Copied from "http://geotoolsnet.sourceforge.net/Index.html":http://geotoolsnet.sourceforge.net/Index.html)
 
-Geotools.Net is a set of .net class useful when handling geographic information. The project started as port from Java to C# of JTS 1.2. It implements the following  OpenGIS specifications:
+Geotools.Net is a set of .NET classes useful when handling geographic information. The project started as a port of JTS 1.2 from Java to C#. It implements the following  OpenGIS specifications:
 
     * Simple Features specification.
     * Coordinate Transformation Services
 
 Other features include:
 
-    * ability to read and write well-known-binary
-    * ability to export features to SVG
-    * ESRI shapefile import and export
+    * Reads and writes well-known-binary format
+    * Exports features to SVG
+    * Imports and exports ESRI shapefiles
 
 h2. Changes
 
