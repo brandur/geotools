@@ -2,7 +2,7 @@ h1. Geotools.Net
 
 This is a mirror of Urban Science's Geotools.Net project, mainly created to clean-up the source files and tests, and to upgrade it to run with modern versions of Visual Studio.
 
-The code is copyright Urban Science Applications, Inc., written by Ronda Bergman, Andrew Coats, and Linda Koeppe; and tested by Keith McLeod. It is licensed under the GPL version 2.1.
+The code is copyright Urban Science Applications, Inc., written by Ronda Bergman, Andrew Coats, and Linda Koeppe; and tested by Keith McLeod. It is licensed under the GPL version 2.1.
 
 h2. Description
 
