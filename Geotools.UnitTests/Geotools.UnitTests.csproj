@@ -1,0 +1,258 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AC943739-F419-43DF-80E9-C77851A5F826}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Geotools.UnitTests</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Geotools.UnitTests</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="JTS, Version=1.6.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\JTS.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.2.0.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="vjslib">
+      <Name>vjslib</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CoordinateSystems\AngularUnitTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CoordinateSystems\CompoundCoordinateSystemTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CoordinateSystems\CoordinateSystemEPSGFactoryTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CoordinateSystems\CoordinateSystemFactoryTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CoordinateSystems\DatumTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CoordinateSystems\EllipsoidTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CoordinateSystems\GeographicCoordinateSystemTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CoordinateSystems\HorizontalCoordinateSystemTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CoordinateSystems\HorizontalDatumTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CoordinateSystems\LinearUnitTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CoordinateSystems\PrimeMeridianTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CoordinateSystems\ProjectedCoordinateSystemTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CoordinateSystems\ProjectionTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CoordinateSystems\TestLinearUnitConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CoordinateSystems\VerticalCoordinateSystemTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CoordinateSystems\VerticalDatumTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CoordinateTransformation\CoordinateTransformationEPSGFactoryTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CoordinateTransformation\MercatorTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CoordinateTransformation\ParameterList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CoordinateTransformation\TransverseMercatorProjectionTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IO\CoordinateSystemWktReaderTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IO\CoordinateSystemWktWriterTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IO\CoordinateSystemXmlWriterTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IO\Shapefile\TestDbaseFileReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IO\WktStreamTokenizerTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utilities\Compare.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utilities\StringTokenizerTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utilities\TestAirDistance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="IO\Shapefile\Testfiles\countries.dbf" />
+    <None Include="IO\Shapefile\Testfiles\countries.shp" />
+    <None Include="IO\Shapefile\Testfiles\countries.shx" />
+    <None Include="IO\Shapefile\Testfiles\ExpectedDataGridDataReader.txt.bak" />
+    <None Include="IO\Shapefile\Testfiles\germany.dbf" />
+    <None Include="IO\Shapefile\Testfiles\germany.shp" />
+    <None Include="IO\Shapefile\Testfiles\germany.shx" />
+    <None Include="IO\Shapefile\Testfiles\KREISE.DBF" />
+    <None Include="IO\Shapefile\Testfiles\KREISE.SBN" />
+    <None Include="IO\Shapefile\Testfiles\KREISE.SBX" />
+    <None Include="IO\Shapefile\Testfiles\KREISE.SHP" />
+    <None Include="IO\Shapefile\Testfiles\KREISE.SHX" />
+    <None Include="IO\Shapefile\Testfiles\ROADS.DBF" />
+    <None Include="IO\Shapefile\Testfiles\roads.sbn" />
+    <None Include="IO\Shapefile\Testfiles\ROADS.SBX" />
+    <None Include="IO\Shapefile\Testfiles\ROADS.SHP" />
+    <None Include="IO\Shapefile\Testfiles\ROADS.SHX" />
+    <None Include="IO\Shapefile\Testfiles\statepop.dbf" />
+    <None Include="IO\Shapefile\Testfiles\statepop.shp" />
+    <None Include="IO\Shapefile\Testfiles\statepop.shx" />
+    <None Include="IO\Shapefile\Testfiles\uscities.dbf" />
+    <None Include="IO\Shapefile\Testfiles\uscities.shp" />
+    <None Include="IO\Shapefile\Testfiles\uscities.shx" />
+    <None Include="IO\Shapefile\Testfiles\vssver.scc" />
+    <Content Include="IO\Testfiles\AngularUnit.txt" />
+    <Content Include="IO\Testfiles\AngularUnit.xml" />
+    <Content Include="IO\Testfiles\CompoundCoordinateSystem.txt" />
+    <Content Include="IO\Testfiles\CompoundCoordinateSystem.xml" />
+    <Content Include="IO\Testfiles\Ellipsoid.xml" />
+    <Content Include="IO\Testfiles\GeographicCoordinateSystem.txt" />
+    <Content Include="IO\Testfiles\GeographicCoordinateSystem.xml" />
+    <Content Include="IO\Testfiles\HorizontalDatum.txt" />
+    <Content Include="IO\Testfiles\HorizontalDatum.xml" />
+    <Content Include="IO\Testfiles\LinearUnit.txt" />
+    <Content Include="IO\Testfiles\LinearUnit.xml" />
+    <Content Include="IO\Testfiles\PrimeMeridian.txt" />
+    <Content Include="IO\Testfiles\PrimeMeridian.xml" />
+    <Content Include="IO\Testfiles\ProjectedCoordinateSystem.txt" />
+    <Content Include="IO\Testfiles\ProjectedCoordinateSystem.xml" />
+    <Content Include="IO\Testfiles\Projection.xml" />
+    <Content Include="IO\Testfiles\Radians.txt" />
+    <Content Include="IO\Shapefile\Testfiles\ExpectedDataGridDataReader.txt" />
+    <Content Include="IO\Testfiles\Spheroid.txt" />
+    <Content Include="IO\Testfiles\test.xml" />
+    <Content Include="IO\Testfiles\VerticalCoordinateSystem.txt" />
+    <Content Include="IO\Testfiles\VerticalCoordinateSystem.xml" />
+    <Content Include="IO\Testfiles\VerticalDatum.txt" />
+    <Content Include="IO\Testfiles\VerticalDatum.xml" />
+    <Content Include="IO\Testfiles\WGS84ConversionInfo.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Geotools\Geotools.csproj">
+      <Project>{A956CDFC-DC41-44FF-B0B4-DF995F57BF0E}</Project>
+      <Name>Geotools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CoordinateSystems\Projections\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

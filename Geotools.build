@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<project name="Main" default="dailybuild" onfailure="email" >
+
+	<property name="target" value="Debug"/>
+	<property name="docs.dir" value="docs"/>
+	<property name="nunit.output" value="Plain"/>
+	<property name="unittest.dir" value=""/>
+
+    <!--
+    	Calls all sub-nant tasks to do a debug build
+    -->
+ 	<target name="Debug" description="Compiles a debug version">
+		<property name="target" value="Debug"/>
+		<call target="build"/>	
+	</target>
+
+  	<!--
+    	Calls all sub-nant tasks to do a release build
+    -->
+	<target name="Release" description="Compiles a release version">
+		<property name="target" value="Release"/>
+		<call target="build"/>
+	</target>
+	
+	
+	<!--
+    	Calls all sub-nant tasks to clean their files
+    -->
+	<target name="clean" description="Deletes temp files.">
+		<delete  failonerror="false">
+            <fileset>
+                <includes name="docs\MSDN\*.html"/>
+                <includes name="docs\MSDN\*.chm"/>
+                <includes name="docs\MSDN\*.hhc"/>
+                <includes name="docs\MSDN\*.hhk"/>
+                <includes name="docs\MSDN\*.hhp"/>
+                <includes name="docs\MSDN\*.log"/>
+                <includes name="build\*.*"/>
+            </fileset>
+        </delete>
+		<property name="target" value="clean"/>
+		<call target="build"/>
+	</target>
+	
+	
+    <target name="build" description="Compiles the system (defaults to a debug build).">
+		<mkdir dir="build"/>
+		<nant basedir="Geotools" target="${target}" buildfile="Geotools\Geotools.build" haltonfailure="false"/>
+		<nant basedir="Geotools.UnitTests" target="${target}" buildfile="Geotools.UnitTests\Geotools.UnitTests.build"/>
+		<nant basedir="Geotools.SystemTests" target="${target}" buildfile="Geotools.SystemTests\Geotools.SystemTests.build"/>
+    </target>
+    
+   
+    
+    <target name="unittest"  description="runs unit tests">
+    	<nunit2  haltonerror="false"  >
+      		<test assemblyname="${unittest.dir}Geotools.UnitTests\bin\Debug\Geotools.UnitTests.dll" fork="true" type="${nunit.output}"/> 
+      	</nunit2>
+   </target>
+   
+   <target name="systemtest"  description="runs unit tests">
+    	<nunit2  haltonerror="false"  >
+      		<test assemblyname="${unittest.dir}Geotools.SystemTests\bin\Debug\Geotools.SystemTests.dll" fork="true" type="${nunit.output}"/> 
+      	</nunit2>
+   </target>
+  
+    
+    <target name="dailybuild" description="Compiles system from scratch using latest source code" >
+		
+		<!-- need to log to Xml file so results can be seen in the web page -->
+		<property name="nunit.output" value="Xml"/>
+		
+		<!-- set the directory where -->
+		<property name="unittest.dir" value="C:\CC\GeotoolsNetCVSBuild\GeotoolsNet\"/>
+		
+		<call target="Debug"/>
+		<call target="unittest"/>
+		<call target="systemtest"/>
+	
+    </target>
+    
+    
+   
+    
+    
+   
+    
+    <target name="doc"  description="build documentation">
+        <echo message="Requires HtmlHelp compiler (hhc.exe) to be in the system path"/>
+        <ndoc failonerror="false">
+            <assemblies basedir=".">
+		<includes name="Geotools\bin\Debug\Geotools.dll"/>
+            </assemblies>
+            <documenters>
+                <documenter name="MSDN">
+                    <property name="OutputDirectory" value="Docs" />
+                    <property name="HtmlHelpName" value="Geotools" />
+                    <property name="HtmlHelpCompilerFilename" value="hhc.exe" />
+                    <property name="IncludeFavorites" value="true" />
+                    <property name="Title" value="Geotools.Net" />
+                    <property name="SplitTOCs" value="False" />
+                    <property name="DefaulTOC" value="" />
+                    <property name="ShowVisualBasic" value="True" />
+                    <property name="ShowMissingSummaries" value="True" />
+                    <property name="ShowMissingRemarks" value="True" />
+                    <property name="ShowMissingParams" value="True" />
+                    <property name="ShowMissingReturns" value="True" />
+                    <property name="ShowMissingValues" value="True" />
+                    <property name="DocumentInternals" value="False" />
+                    <property name="DocumentProtected" value="True" />
+                    <property name="DocumentPrivates" value="False" />
+                    <property name="DocumentEmptyNamespaces" value="False" />
+                    <property name="IncludeAssemblyVersion" value="False" />
+                    <property name="CopyrightText" value="Geotools.Net" />
+                    <property name="CopyrightHref" value="http://geotoolsnet.sourceforge.net/Index.html" />
+                 </documenter>             
+            </documenters> 
+        </ndoc>
+    </target>
+    
+</project>
