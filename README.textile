@@ -4,6 +4,8 @@ This is a mirror of Urban Science's Geotools.Net project, mainly created to clea
 
 The code is copyright Urban Science Applications, Inc., written by Ronda Bergman, Andrew Coats, and Linda Koeppe; and tested by Keith McLeod. It is licensed under the GPL version 2.1.
 
+-- fyrerise <fyrerise@"mutelight.org":http://mutelight.org>
+
 h2. Description
 
 (Copied from "http://geotoolsnet.sourceforge.net/Index.html":http://geotoolsnet.sourceforge.net/Index.html)
@@ -41,5 +43,3 @@ Some changes I'd still like to make to the source follow.
     * The JTS binary that comes with this code is version 1.6, it may or may not be advantageous to upgrade to 1.8
     * The unit test project contains a lot of constructor tests, I might get rid of these if they end up being more trouble maintaining than they're worth
     * More testing in general is probably in order
-
--- fyrerise (fyrerise@mutelight.org)
